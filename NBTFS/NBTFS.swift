@@ -148,8 +148,6 @@ class NBTFS: NSObject {
                     return String(describing: key)
                 }
             })
-        case is Int8.Type:
-            return [String(describing: object) + ".int8.txt"]
         default:
             return [String(describing: object)]
         }
@@ -178,8 +176,6 @@ class NBTFS: NSObject {
             return string.replacingOccurrences(of: ".list_int32", with: "")
         } else if string.hasSuffix(".list_any") {
             return string.replacingOccurrences(of: ".list_any", with: "")
-        } else if string.hasSuffix(".any.txt") {
-            return string.replacingOccurrences(of: ".any.txt", with: "")
         }
         
         return string
