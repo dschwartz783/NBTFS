@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		338D50961E3BDE560062B6FE /* OSXFUSE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C8EB0D1E3B107C00DB27AE /* OSXFUSE.framework */; };
+		338D50981E3D041B0062B6FE /* NBTFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338D50971E3D041B0062B6FE /* NBTFS.swift */; };
 		33C8EB061E3B102100DB27AE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8EB051E3B102100DB27AE /* main.swift */; };
+		33C8EB151E3B117D00DB27AE /* SNBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8EB131E3B117D00DB27AE /* SNBT.swift */; };
+		33C8EB161E3B117D00DB27AE /* TagID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8EB141E3B117D00DB27AE /* TagID.swift */; };
+		33C8EB191E3B12F500DB27AE /* DataBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8EB181E3B12F500DB27AE /* DataBinary.swift */; };
+		33C8EB1B1E3B13E300DB27AE /* Shiftable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C8EB1A1E3B13E300DB27AE /* Shiftable.swift */; };
+		33C8EB1D1E3B144800DB27AE /* libz.1.2.8.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C8EB1C1E3B144800DB27AE /* libz.1.2.8.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		33C8EB001E3B102100DB27AE /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 16;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
@@ -23,8 +30,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		338D50971E3D041B0062B6FE /* NBTFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBTFS.swift; sourceTree = "<group>"; };
+		338D50991E3D7C4B0062B6FE /* NBTFS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NBTFS.png; sourceTree = "<group>"; };
+		338D509A1E3D83110062B6FE /* NBTFS_Resources.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NBTFS_Resources.plist; sourceTree = "<group>"; };
 		33C8EB021E3B102100DB27AE /* NBTFS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NBTFS; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C8EB051E3B102100DB27AE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		33C8EB0D1E3B107C00DB27AE /* OSXFUSE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSXFUSE.framework; path = ../../../../Library/Frameworks/OSXFUSE.framework; sourceTree = "<group>"; };
+		33C8EB131E3B117D00DB27AE /* SNBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SNBT.swift; sourceTree = "<group>"; };
+		33C8EB141E3B117D00DB27AE /* TagID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagID.swift; sourceTree = "<group>"; };
+		33C8EB171E3B11A400DB27AE /* OSXFUSE-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSXFUSE-Bridging-Header.h"; sourceTree = "<group>"; };
+		33C8EB181E3B12F500DB27AE /* DataBinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBinary.swift; sourceTree = "<group>"; };
+		33C8EB1A1E3B13E300DB27AE /* Shiftable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shiftable.swift; sourceTree = "<group>"; };
+		33C8EB1C1E3B144800DB27AE /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338D50961E3BDE560062B6FE /* OSXFUSE.framework in Frameworks */,
+				33C8EB1D1E3B144800DB27AE /* libz.1.2.8.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +62,7 @@
 			children = (
 				33C8EB041E3B102100DB27AE /* NBTFS */,
 				33C8EB031E3B102100DB27AE /* Products */,
+				33C8EB0C1E3B107C00DB27AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +77,26 @@
 		33C8EB041E3B102100DB27AE /* NBTFS */ = {
 			isa = PBXGroup;
 			children = (
+				338D50991E3D7C4B0062B6FE /* NBTFS.png */,
+				33C8EB1A1E3B13E300DB27AE /* Shiftable.swift */,
+				33C8EB181E3B12F500DB27AE /* DataBinary.swift */,
+				33C8EB131E3B117D00DB27AE /* SNBT.swift */,
+				33C8EB141E3B117D00DB27AE /* TagID.swift */,
 				33C8EB051E3B102100DB27AE /* main.swift */,
+				33C8EB171E3B11A400DB27AE /* OSXFUSE-Bridging-Header.h */,
+				338D50971E3D041B0062B6FE /* NBTFS.swift */,
+				338D509A1E3D83110062B6FE /* NBTFS_Resources.plist */,
 			);
 			path = NBTFS;
+			sourceTree = "<group>";
+		};
+		33C8EB0C1E3B107C00DB27AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33C8EB1C1E3B144800DB27AE /* libz.1.2.8.tbd */,
+				33C8EB0D1E3B107C00DB27AE /* OSXFUSE.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,8 +131,7 @@
 				TargetAttributes = {
 					33C8EB011E3B102100DB27AE = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 56ZE5MZEBQ;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -121,7 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C8EB151E3B117D00DB27AE /* SNBT.swift in Sources */,
+				33C8EB161E3B117D00DB27AE /* TagID.swift in Sources */,
+				33C8EB191E3B12F500DB27AE /* DataBinary.swift in Sources */,
 				33C8EB061E3B102100DB27AE /* main.swift in Sources */,
+				33C8EB1B1E3B13E300DB27AE /* Shiftable.swift in Sources */,
+				338D50981E3D041B0062B6FE /* NBTFS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,18 +260,46 @@
 		33C8EB0A1E3B102100DB27AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 56ZE5MZEBQ;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					NBTFS/NBTFS_Resources.plist,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
+				SWIFT_OBJC_BRIDGING_HEADER = "NBTFS/OSXFUSE-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = YES;
 			};
 			name = Debug;
 		};
 		33C8EB0B1E3B102100DB27AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 56ZE5MZEBQ;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					NBTFS/NBTFS_Resources.plist,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRINGS_FILE_OUTPUT_ENCODING = "UTF-8";
+				SWIFT_OBJC_BRIDGING_HEADER = "NBTFS/OSXFUSE-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USE_HEADERMAP = YES;
 			};
 			name = Release;
 		};
@@ -253,6 +322,7 @@
 				33C8EB0B1E3B102100DB27AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

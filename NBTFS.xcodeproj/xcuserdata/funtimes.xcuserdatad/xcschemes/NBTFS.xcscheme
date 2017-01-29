@@ -61,6 +61,12 @@
             ReferencedContainer = "container:NBTFS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "&quot;/Users/funtimes/Library/Application Support/minecraft/saves/HUB/playerdata/26620ade-db43-47c9-971a-c34635b08c1a.dat&quot;"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
