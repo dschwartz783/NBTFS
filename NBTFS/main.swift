@@ -12,11 +12,10 @@ if ProcessInfo.processInfo.arguments.count == 2 && FileManager.default.fileExist
     NBTFS.main!.mount(atPath: URL(fileURLWithPath: ProcessInfo.processInfo.arguments[1]).path.appending("_mount"),
                       withOptions: [
                         "volname=\(URL(fileURLWithPath: ProcessInfo.processInfo.arguments[1]).lastPathComponent)",
-                        "fstypename=NBTFS"
-        ]
+                        "fstypename=NBTFS"],
+                      shouldForeground: true,
+                      detachNewThread: false
     )
-    
-    RunLoop.main.run()
 } else {
     print("Please specify an existing NBT file")
 }
