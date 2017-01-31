@@ -16,6 +16,11 @@ if ProcessInfo.processInfo.arguments.count == 2 && FileManager.default.fileExist
                       shouldForeground: true,
                       detachNewThread: false
     )
+    
+    atexit {
+        rmdir(URL(fileURLWithPath: ProcessInfo.processInfo.arguments[1]).path.appending("_mount"))
+    }
+    
 } else {
     print("Please specify an existing NBT file")
 }

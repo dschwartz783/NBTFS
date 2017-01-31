@@ -14,6 +14,10 @@ class NBTFS: NSObject {
     
     let NBTFile = SNBT(fileURL: URL(fileURLWithPath: ProcessInfo.processInfo.arguments[1]))
     
+    var cache: [String: Data] = [:]
+    
+    let cacheUpdateQueue = DispatchQueue(label: "cacheUpdateQueue")
+    
     override func openFile(atPath path: String!, mode: Int32, userData: AutoreleasingUnsafeMutablePointer<AnyObject?>!) throws {
         throw POSIXError(.EPERM)
     }
@@ -51,6 +55,10 @@ class NBTFS: NSObject {
     }
     
     override func contents(atPath path: String!) -> Data! {
+        if let cachedObject = cache[path] {
+            return cachedObject
+        }
+        
         let pathURL = URL(fileURLWithPath: path)
         
         var currentItem: Any? = self.NBTFile.fileContentsObject
@@ -63,6 +71,8 @@ class NBTFS: NSObject {
                 currentItem = (currentItem as! [Any])[Int(removeSuffix(fromString: component))!]
             }
         }
+        
+        self.cache[path] = String(describing: currentItem!).data(using: String.Encoding.utf8)!
         
         return String(describing: currentItem!).data(using: String.Encoding.utf8)!
     }
