@@ -1,11 +1,11 @@
-#NBTFS
+# NBTFS
 
 A filesystem for viewing the contents of an NBT file
 
-###Details
+### Details
 
 This filesystem offers read-only access to an NBT file. Read/write will come in a future update.
 
-###Installation
+### Installation
 
 Download OSXFUSE from https://osxfuse.github.io, and it should build
